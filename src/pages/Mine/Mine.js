@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Mine.css"
-import mine2 from "../../assets/img/mine2.png"
-import mine from "../../assets/img/mine.jpg"
+import mine2 from "../../assets/img/news.png"
+import mine from "../../assets/img/set.png"
 import mine1 from "../../assets/img/1.jpg"
 import keep from "../../assets/img/keep.png"
 import icon from "../../assets/img/icon_refund.png"

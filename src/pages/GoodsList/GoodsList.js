@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./GoodsList.css"
 import GoBack from '../../components/GoBack'
 import { connect } from "react-redux"
-import { reqGoodsAction, goods } from "../../store"
+import { reqGoodsAction, goods } from "../../store/modules/goods"
 import querystring from "querystring"
 import { Link } from "react-router-dom"
 class GoodsList extends Component {
@@ -22,9 +22,9 @@ class GoodsList extends Component {
     render() {
         const { goods } = this.props
         const { name } = this.state
-        if (goods.length === 0) {
-            return null
-        }
+        // if (goods.length === 0) {
+        //     return null
+        // }
         // console.log(goods);
         return (
             <div className="goodslist">
@@ -33,7 +33,7 @@ class GoodsList extends Component {
                     <GoBack></GoBack>
                 </h3>
                 <ul>
-                    {goods.map(item => {
+                    {goods?(goods.map(item => {
                         return (
                             <li key={item.id}>
                                 <div className="left">
@@ -46,7 +46,7 @@ class GoodsList extends Component {
                                 </div>
                             </li>
                         )
-                    })}
+                    })):[]}
                 </ul>
             </div>
         )

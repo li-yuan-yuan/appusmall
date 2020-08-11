@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Cate.css"
 import { connect } from "react-redux"
-import { catetree, reqCatetreeAction } from "../../store"
+import { catetree, reqCatetreeAction } from "../../store/modules/catetree"
 class Cate extends Component {
     constructor() {
         super()
@@ -41,7 +41,7 @@ class Cate extends Component {
                     <ul className="right">
                         {catetree[i].children.map((item) => {
                             return (
-                                <li key={item.id} onClick={()=>this.goList(item.pid,item.catename)}>
+                                <li key={item.id} onClick={()=>this.goList(item.id,item.catename)}>
                                     <img src={item.img} alt="" />
                                     <div className="name">{item.catename}</div>
                                 </li>

@@ -4,7 +4,10 @@ import { connect } from "react-redux"
 import querystring from "querystring"
 import "./GoodsDetail.css"
 import cartOn from "../../assets/img/img/cart_on.png"
-import { goodsinfo, reqGoodsInfoAction } from "../../store/index"
+import { goodsinfo, reqGoodsInfoAction } from "../../store/modules/goodsinfo"
+import {getUser} from "../../store/modules/user"
+import { successAlert } from "../../util/alert"
+import {reqCartAdd} from "../../util/request"
 class GoodsDetail extends Component {
     constructor(){
         super()
@@ -14,8 +17,8 @@ class GoodsDetail extends Component {
         }
     }
     componentDidMount() {
-        const id = querystring.parse(this.props.location.search.slice(1)).id;
-        this.props.reqDetail(id)
+        this.id = querystring.parse(this.props.location.search.slice(1)).id;
+        this.props.reqDetail(this.id)
     }
     changeIsShow(){
         this.setState({
@@ -36,6 +39,19 @@ class GoodsDetail extends Component {
             ev.target.className="specs"
         }
         //specs用来存储 选中的规格 暂时未写
+    }
+    //加入购物车
+    addShop(){
+        reqCartAdd({
+            uid:this.props.user.uid,
+            goodsid:this.id,
+            num:1
+        }).then(res=>{
+            this.setState({
+                isShow:false
+            })
+            successAlert(res.data.msg)
+        })
     }
     render() {
         const { detail } = this.props;
@@ -94,7 +110,7 @@ class GoodsDetail extends Component {
                             {/* <span className="specs active">30L</span> */}
                         </div>
                         <div className="fline3">
-                            <span className="cart">加入购物车</span>
+                            <span className="cart" onClick={()=>this.addShop()}>加入购物车</span>
                         </div>
                     </div>
                     </div>):null}
@@ -104,7 +120,8 @@ class GoodsDetail extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        detail: goodsinfo(state)
+        detail: goodsinfo(state),
+        user:getUser(state)
     }
 }
 const mapDispatchToProps = (dispatch) => {

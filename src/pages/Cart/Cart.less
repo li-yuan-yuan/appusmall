@@ -6,4 +6,128 @@
         font-size: .4rem;
         line-height: .8rem;
     }
+    ul{
+        padding-bottom: 2.62rem;
+        li{
+            margin-top: .3rem;
+            
+            width: 100%;
+            overflow: hidden;
+            .delml{
+                width: 7.8rem;
+                transition: all .3s;
+                padding-left: .3rem;
+            }
+            .delmDel{
+                width: 7.8rem;
+                transition: all .3s;
+                padding-left: .3rem;
+                margin-left: -.84rem;
+            }
+            .cline1{
+                margin-bottom: .3rem;
+                color: #999;
+                font-size: .25rem;
+                img{
+                    padding-right: .3rem;
+                }
+            }
+            .cline2{
+                display: flex;
+                height: 2rem;
+                .circle{
+                    line-height: 2rem;                    
+                    text-align: center;
+                    padding-right: .1rem;
+                    img{
+                        vertical-align: middle;
+                    }
+                }
+                .cimg{
+                    img{
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        vertical-align: middle;
+                    }
+                    line-height: 2rem;
+                }
+                .clist{
+                    width: 3.4rem;
+                    padding-left: .2rem;
+                    h4{
+                        font-size: .32rem;
+                    }
+                    .btn{
+                        color: #999;
+                        line-height: .7rem;
+                        padding-top:.3rem ;
+                        div{
+                            display: inline-block;
+                            border: .01rem solid #999;
+                            padding: 0.1rem 0.3rem;
+                            line-height: .3rem;
+                        }
+                        em{
+                            border: .01rem solid #999;
+                            padding: .1rem .3rem;
+                            display: inline-block;
+                            line-height: .3rem;
+                        }
+                    }
+                    p{
+                        font-size: .28rem;
+                        padding-top: .15rem;
+                    }
+                }
+                .sumPrice{
+                    padding-top: .5rem;
+                    padding-right:1rem ;
+                }
+                .delbtn{
+                    background-color: orange;
+                    color: #fff;
+                    line-height: 2rem;
+                    width: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .footer{
+        height: 1.3rem;
+        border-top: 0.01rem solid #999;
+        position: fixed;
+        bottom: 1.3rem;
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        .xuan{
+            width: 1rem;
+            text-align: center;
+            height: 1.3rem;
+            font-size: .3rem;
+            padding: 0 .1rem;
+
+            img{
+                padding: .2rem .3rem;
+            }
+        }
+        .addPrice{
+            flex: 1;
+            :first-child{
+                padding: .4rem 0 .1rem 0;
+            }
+            :last-child{
+                color: #999;
+            }
+        }
+        .pay{
+            width: 2rem;
+            background-color: orange;
+            color: #fff;
+            font-size: .3rem;
+            line-height: 1.3rem;
+            text-align: center;
+        }
+    }
 }

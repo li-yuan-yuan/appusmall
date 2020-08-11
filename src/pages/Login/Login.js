@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { reqLogin } from "../../util/request"
 import { Toast } from 'antd-mobile';
+import {connect} from "react-redux"
+import {changeUserAction} from "../../store/modules/user"
 import "./Login.css"
-export default class Login extends Component {
+class Login extends Component {
     constructor() {
         super()
         this.state = {
@@ -19,6 +21,7 @@ export default class Login extends Component {
     failToast(msg) {
         Toast.fail(msg, 1);
     }
+    //修改user
     changeUser(ev, key) {
         this.setState({
             userL: {
@@ -31,8 +34,11 @@ export default class Login extends Component {
         reqLogin(this.state.userL).then(res => {
             if (res.data.code === 200) {
                 this.successToast(res.data.msg)
-                this.props.history.push("./index")
-                sessionStorage.setItem("key",1)
+                //要把res.data.list 存进redux/user/user 
+                console.log(res.data);
+                this.props.changeUser(res.data.list)
+                sessionStorage.setItem("user",JSON.stringify(res.data.list))
+                this.props.history.push("/index")
             } else {
                 this.failToast(res.data.msg)
             }
@@ -62,3 +68,15 @@ export default class Login extends Component {
         )
     }
 }
+const mapState=(state)=>{
+    console.log(state)
+    return {
+      
+    }
+}
+const mapDispatch=(dispatch)=>{
+    return {
+        changeUser:(user)=>dispatch(changeUserAction(user))
+    }
+}
+export default connect(mapState,mapDispatch)(Login)

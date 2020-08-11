@@ -67,3 +67,35 @@ export const reqLogin=(data)=>{
         data:qs.stringify(data)
     })
 }
+//==============================购物车=====================
+//获取购物车列表
+export const reqCartList=(params)=>{
+    return axios({
+        url:"/api/cartlist",
+        params
+    })
+}
+//购物车添加
+export const reqCartAdd=(data)=>{
+    return axios({
+        url:"/api/cartadd",
+        method:"post",
+        data:qs.stringify(data)
+    })
+}
+//购物车删除
+export const reqCartDel=(data)=>{
+    return axios({
+        url:"/api/cartdelete",
+        method:"post",
+        data:qs.stringify(data)
+    })
+}
+//购物车修改
+export const reqCartEdit=(data)=>{
+    return axios({
+        url:"/api/cartedit",
+        method:"post",
+        data:qs.stringify(data)
+    })
+}

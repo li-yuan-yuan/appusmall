@@ -4,7 +4,8 @@ import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
 import List from "./components/List/List"
 import Nav from "./components/Nav/Nav"
-import { banners ,requestBannerAction,indexgoods,reqIndexGoodsAction} from '../../store'
+import { banners ,requestBannerAction} from '../../store/modules/banner'
+import { indexgoods,reqIndexGoodsAction} from '../../store/modules/indexgoods'
 class Home extends Component {
     componentDidMount(){
         this.props.reqBanners()
