@@ -1,0 +1,14 @@
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav li img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.nav li span{
+    display: inline-block;
+    padding-left: .15rem;
+    font-size: .3rem;
+    color: #999;
+}

@@ -1,0 +1,53 @@
+.goodslist .line1 {
+  text-align: center;
+  line-height: 0.8rem;
+  height: 0.8rem;
+  color: #fff;
+  font-size: 0.4rem;
+  position: relative;
+  background-color: orange;
+}
+.goodslist .line1 span {
+  position: absolute;
+  left: 0.3rem;
+}
+.goodslist ul li {
+  overflow: hidden;
+  height: 1.8rem;
+  margin-top: 0.4rem;
+}
+.goodslist ul .left {
+  float: left;
+  width: 2rem;
+  height: 2rem;
+  padding-left: 0.2rem;
+}
+.goodslist ul .left img {
+  width: 2rem;
+  height: 2rem;
+}
+.goodslist ul .right {
+  float: left;
+  padding-left: 0.2rem;
+}
+.goodslist ul .right h4 {
+  font-size: 0.4rem;
+  color: #333;
+}
+.goodslist ul .right .price {
+  color: red;
+  font-size: 0.4rem;
+  margin-top: 0.16rem;
+  margin-bottom: 0.02rem;
+}
+.goodslist ul .right .btn {
+  display: inline-block;
+  width: 1.4rem;
+  height: 0.6rem;
+  background-color: orange;
+  color: #fff;
+  border-radius: 0.1rem;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.2rem;
+}

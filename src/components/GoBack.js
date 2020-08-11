@@ -6,7 +6,7 @@ class GoBack extends Component {
     }
     render() {
         return (
-            <button onClick={()=>this.goBack()}>&lt;</button>
+            <span onClick={()=>this.goBack()}>&lt;</span>
         )
     }
 }

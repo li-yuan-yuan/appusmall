@@ -1,0 +1,51 @@
+.cate h3 {
+  line-height: 0.8rem;
+  background-color: orange;
+  text-align: center;
+  color: #fff;
+  font-size: 0.4rem;
+}
+.cate .main {
+  overflow: hidden;
+}
+.cate .main .left {
+  float: left;
+  text-align: center;
+  width: 2.8rem;
+  font-size: 0.26rem;
+}
+.cate .main .left li {
+  line-height: 0.8rem;
+}
+.cate .main .left .action {
+  color: orange;
+  border-left: 4px solid #1d84a7;
+}
+.cate .main .right {
+  float: left;
+  width: 4.4rem;
+}
+.cate .main .right li {
+  float: left;
+  border: 1px solid #1d84a7;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  margin: 0.08rem;
+  z-index: 1;
+}
+.cate .main .right li img {
+  width: 2rem;
+  height: 2rem;
+}
+.cate .main .right li .name {
+  position: absolute;
+  bottom: 0;
+  width: 2rem;
+  background-color: #1d84a7;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}

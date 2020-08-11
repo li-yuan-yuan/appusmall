@@ -1,0 +1,148 @@
+.goodsdetail{
+    .header{
+        line-height: .9rem;
+        background-color: orange;
+        color: #fff;
+        font-size:.4rem;
+        text-align: center;
+        span{
+            float: left;
+            padding-left: .2rem;
+        }
+    }
+    .main{
+        .topimg{
+            height: 4rem;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(185, 184, 184, 0.781);
+            img{
+                width: 100%;
+            }
+        }
+        .line1{
+            display: flex;
+            padding: .1rem .3rem;
+            h3{
+                flex-grow: 1;
+                font-size: .35rem;
+            }
+            div{
+                text-align: center;
+                color: red;
+                border-left: 1px solid rgba(0,0,0,.1);
+                padding-left: .2rem;
+            }
+            img{
+                width: 0.2rem;
+            }
+
+        }
+        .line2{
+            padding: .1rem .3rem 0 .3rem;
+            span{
+                color: red;
+                font-size: .3rem;
+                margin-right: .2rem;
+            }
+            em{
+                display: inline-block;
+                border: 1px solid orange;
+                color: orange;
+                padding: .05rem;
+                font-size: .2rem;
+                margin-right: .1rem;
+            }
+        }
+        .line3{
+            padding: 0  .3rem .3rem .3rem;
+            text-decoration: line-through;
+            color: #666;
+        }
+
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        .right{
+            height:1rem;
+            background-color: orange;
+            color: #fff;
+            line-height: 1rem;
+            font-size: .3rem;
+            padding: 0 .2rem;
+            float: right;
+        }
+    }
+    .car{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(102, 102, 102, 0.452);
+        position: fixed;
+        top: 0;
+        left: 0;
+        .cartFooter{
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            padding: .3rem;
+            width: 100%;
+            .fline1{
+                overflow: hidden;
+                .left{
+                    float: left;
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    border-radius: .2rem;
+                    overflow: hidden;
+                    img{
+                      width: 2.5rem;
+                      height: 2.5rem;  
+                    }
+                }
+                .right{
+                    float: left;
+                    padding-left: .3rem;
+                    h3{
+                        font-size: .4rem;
+                    }
+                }
+            }
+            .fline2{
+               h2{
+                font-size: .4rem;
+                font-weight: 700;
+                line-height: 3;
+               }
+               .specs{
+                   display: inline-block;
+                   border: 1px solid #999999;
+                   color: #999;
+                   padding: .18rem .3rem;
+                   border-radius: .1rem;
+                   font-size: .25rem;
+                    margin: 0 .18rem;
+                }
+               .active{
+                border: 1px solid orange;
+                color: orange;
+               }
+            }
+            .fline3{
+                text-align: center;
+                margin-top: .3rem;
+                .cart{
+                    display: inline-block;
+                    height: 1rem;
+                    line-height: 1rem;
+                    background-color: orange;
+                    color: #fff;
+                    font-size: .3rem;
+                    padding: 0 .3rem;
+                    border-radius: .1rem;
+                }
+            }
+        }
+    }
+}

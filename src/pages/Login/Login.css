@@ -1,0 +1,39 @@
+.login .top {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  background-color: orange;
+  color: #fff;
+  font-size: 0.4rem;
+  position: relative;
+}
+.login .top .reg {
+  position: absolute;
+  right: 0.3rem;
+  color: #fff;
+  font-size: 0.4rem;
+}
+.login .main {
+  margin-top: 2rem;
+  padding: 0.3rem;
+}
+.login .main p {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #999;
+  font-size: 0.3rem;
+  margin-top: 0.3rem;
+}
+.login .main .wpass {
+  text-align: right;
+  color: #999;
+  margin: 0.5rem 0 0.3rem 0;
+  font-size: 0.3rem;
+}
+.login .main .logbtn {
+  line-height: 1rem;
+  background-color: orange;
+  color: #fff;
+  font-size: 0.3rem;
+  text-align: center;
+  border-radius: 0.2rem;
+}
