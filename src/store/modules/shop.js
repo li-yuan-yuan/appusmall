@@ -48,13 +48,11 @@ export const reqDelAction = id => {
 //页面出发发起获取列表请求
 export const reqListAction = () => {
     return (dispatch, getState) => {
-        //缓存层，有数据 不发请求
-        // if(getState().goodsinfo[0]){
-        //     if(id===getState().goodsinfo[0].id+''){
-        //         return;
-        //     }
-        // }
-
+       //缓存层，有数据 不发请求
+       const {shop}=getState().shop
+       if(!shop){
+           return;
+       }
         //发请求
         reqCartList({ uid: getUser(getState()).uid }).then(res => {
             const list = res.data.list ? res.data.list : [];

@@ -11,7 +11,7 @@ export const changeCatetreeAction=(arr)=>{
 export const reqCatetreeAction=()=>{
     return(dispatch,getState)=>{
          //缓存层，有数据 不发请求
-         const {catetree}=getState()
+         const {catetree}=getState().catetree
          if(catetree.length>0){
              return;
          }

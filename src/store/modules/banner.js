@@ -12,7 +12,7 @@ export const requestBannerAction=()=>{
     //如果在一个action creator中，要处理异步操作，需要return 一个函数
     return (dispatch,getState)=>{
         //缓存层，有数据 不发请求
-        const {banners}=getState()
+        const {banners}=getState().banners
         if(banners.length>0){
             return;
         }

@@ -10,6 +10,7 @@ export default function Banner(props) {
                 >
                     {list.map(val => (
                         <img
+                            alt="banner"
                             src={val.img}
                             key={val.id}
                             style={{ width: '100%', verticalAlign: 'top' }}

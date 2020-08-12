@@ -12,7 +12,7 @@ export const changeIndexGoodsAction=(arr)=>{
 export const reqIndexGoodsAction=()=>{
     return (dispatch,getState)=>{
         //缓存层，有数据 不发请求
-        const {indexgoods}=getState()
+        const {indexgoods}=getState().indexgoods
         if(indexgoods.length>0){
             return;
         }

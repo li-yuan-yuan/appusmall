@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, Redirect, NavLink } from "react-router-dom"
+import { Switch, Redirect, NavLink } from "react-router-dom"
 import asyncComponent from "../../util/asyncComponent"
 import "./Index.css"
 

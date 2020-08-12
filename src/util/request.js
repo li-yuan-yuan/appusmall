@@ -3,16 +3,16 @@ import qs from "qs"
 
 //请求拦截
 axios.interceptors.request.use(config=>{
-    if(config.url !="/api/login"){
+    if(config.url !=="/api/login"){
         config.headers.authorization = JSON.parse(sessionStorage.getItem('user')).token;
     }
     return config
 })
 //响应拦截
-axios.interceptors.response.use(res=>{
-    console.log(res);
-    return res;
-})
+// axios.interceptors.response.use(res=>{
+//     console.log(res);
+//     return res;
+// })
 //==============================首页=====================
 //banner图
 export const reqBanner=()=>{

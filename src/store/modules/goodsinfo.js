@@ -11,11 +11,14 @@ export const changeGoodsInfoAction=(obj)=>{
 export const reqGoodsInfoAction=(id)=>{
     return(dispatch,getState)=>{
         //缓存层，有数据 不发请求
-        if(getState().goodsinfo[0]){
-            if(id===getState().goodsinfo[0].id+''){
+        let ginfo=getState().goodsinfo.goodsinfo
+        if(Object.getOwnPropertyNames(ginfo).length!==0){
+            // console.log(ginfo);
+            if(id===ginfo[0].id+''){
                 return;
             }
         }
+        
         
         //发请求
         reqGoodInfo({id:id}).then(res=>{
@@ -28,7 +31,7 @@ const reducer =(state=initState,action)=>{
     switch (action.type){
         //修改一个商品详情
         case "changeGoodsInfo":
-            console.log(action.obj);
+            // console.log(action.obj);
             return {
                 ...state,
                 goodsinfo:action.obj

@@ -24,7 +24,7 @@ import { successAlert } from "../../util/alert"
 class Cart extends Component {
     componentDidMount() {
         this.props.rereqList()
-        console.log(this.props.shopList);
+        // console.log(this.props.shopList);
     }
     sub(item) {
         if (item.num <= 1) {
