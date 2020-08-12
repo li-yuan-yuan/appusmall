@@ -36,49 +36,56 @@ class Cart extends Component {
     render() {
         const { shopList, reqEditAction, changeOne, isAll, changeAll, isEditor, changeIsEditor, reqDelAction, getAllPrice } = this.props
         if (shopList.length === 0) {
-            return null
+            return (
+                <div className="cart">
+                     <h3>购物车</h3>
+                     <Kong></Kong>
+                </div>
+            )
         }
         return (
             <div className="cart">
                 <h3>购物车</h3>
                 <ul>
-                    {shopList ? shopList.map((item, index) => {
-                        console.log(item);
-                        return (
-                            <li key={item.goodsid}>
-                                <div className={isEditor ? 'delmDel' : 'delml'}>
-                                    {/* //delmDel delml*/}
-                                    <div className="cline1">
-                                        <img src={storeImg} alt="" />
-                            杭州保税区仓
-                            </div>
-                                    <div className="cline2">
-                                        <div className="circle">
-                                            <img src={item.checked ? radh : radn} onClick={() => changeOne(index)} alt="" />
-                                        </div>
-                                        <div className="cimg">
-                                            <img src={item.img} alt="" />
-                                        </div>
-                                        <div className="clist">
-                                            <h4>{item.goodsname}</h4>
-                                            <div className="btn">
-                                                <div onClick={() => this.sub(item)}>-</div>
-                                                <em>{item.num}</em>
-                                                <div onClick={() => reqEditAction({ id: item.id, type: 2 })}>+</div>
+                    {
+                        shopList.map((item, index) => {
+                            console.log(item);
+                            return (
+                                <li key={item.goodsid}>
+                                    <div className={isEditor ? 'delmDel' : 'delml'}>
+                                        {/* //delmDel delml*/}
+                                        <div className="cline1">
+                                            <img src={storeImg} alt="" />
+                                杭州保税区仓
+                                </div>
+                                        <div className="cline2">
+                                            <div className="circle">
+                                                <img src={item.checked ? radh : radn} onClick={() => changeOne(index)} alt="" />
                                             </div>
-                                            <p>总价：{item.price * item.num}</p>
-                                        </div>
-                                        <div className="sumPrice">
-                                            ￥{item.price}
-                                        </div>
-                                        <div className="delbtn" onClick={() => reqDelAction(item.id)}>
-                                            删除
-                                </div>
+                                            <div className="cimg">
+                                                <img src={item.img} alt="" />
+                                            </div>
+                                            <div className="clist">
+                                                <h4>{item.goodsname}</h4>
+                                                <div className="btn">
+                                                    <div onClick={() => this.sub(item)}>-</div>
+                                                    <em>{item.num}</em>
+                                                    <div onClick={() => reqEditAction({ id: item.id, type: 2 })}>+</div>
+                                                </div>
+                                                <p>总价：{item.price * item.num}</p>
+                                            </div>
+                                            <div className="sumPrice">
+                                                ￥{item.price}
+                                            </div>
+                                            <div className="delbtn" onClick={() => reqDelAction(item.id)}>
+                                                删除
                                     </div>
-                                </div>
-                            </li>
-                        )
-                    }) : <Kong></Kong>}
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
                 <div className="footer">
                     <div className="xuan" onClick={() => changeAll()}>

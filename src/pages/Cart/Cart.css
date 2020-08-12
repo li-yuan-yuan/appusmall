@@ -31,6 +31,8 @@
 }
 .cart ul li .cline1 img {
   padding-right: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
 }
 .cart ul li .cline2 {
   display: flex;
@@ -43,6 +45,8 @@
 }
 .cart ul li .cline2 .circle img {
   vertical-align: middle;
+  width: 0.3rem;
+  height: 0.3rem;
 }
 .cart ul li .cline2 .cimg {
   line-height: 2rem;
@@ -63,6 +67,7 @@
   color: #999;
   line-height: 0.7rem;
   padding-top: 0.3rem;
+  font-size: 0.28rem;
 }
 .cart ul li .cline2 .clist .btn div {
   display: inline-block;
@@ -82,7 +87,8 @@
 }
 .cart ul li .cline2 .sumPrice {
   padding-top: 0.5rem;
-  padding-right: 1rem ;
+  padding-right: 1.03rem;
+  font-size: 0.28rem;
 }
 .cart ul li .cline2 .delbtn {
   background-color: orange;
@@ -90,6 +96,7 @@
   line-height: 2rem;
   width: 1rem;
   text-align: center;
+  font-size: 0.28rem;
 }
 .cart .footer {
   height: 1.3rem;
@@ -109,8 +116,11 @@
 }
 .cart .footer .xuan img {
   padding: 0.2rem 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
 }
 .cart .footer .addPrice {
+  font-size: 0.2rem;
   flex: 1;
 }
 .cart .footer .addPrice :first-child {

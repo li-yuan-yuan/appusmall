@@ -35,7 +35,7 @@ class Login extends Component {
             if (res.data.code === 200) {
                 this.successToast(res.data.msg)
                 //要把res.data.list 存进redux/user/user 
-                console.log(res.data);
+                // console.log(res.data);
                 this.props.changeUser(res.data.list)
                 sessionStorage.setItem("user",JSON.stringify(res.data.list))
                 this.props.history.push("/index")
