@@ -49,10 +49,10 @@ export const reqDelAction = id => {
 export const reqListAction = () => {
     return (dispatch, getState) => {
        //缓存层，有数据 不发请求
-       const {shop}=getState().shop
-       if(!shop){
-           return;
-       }
+    //    const {shop}=getState().shop
+    //    if(!shop){
+    //        return;
+    //    }
         //发请求
         reqCartList({ uid: getUser(getState()).uid }).then(res => {
             const list = res.data.list ? res.data.list : [];

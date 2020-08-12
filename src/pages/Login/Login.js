@@ -15,6 +15,10 @@ class Login extends Component {
             }
         }
     }
+    componentDidMount(){
+        //本应该在退出做
+        sessionStorage.removeItem("user")
+    }
     successToast(msg) {
         Toast.success(msg, 1);
     }
@@ -69,7 +73,7 @@ class Login extends Component {
     }
 }
 const mapState=(state)=>{
-    console.log(state)
+    // console.log(state)
     return {
       
     }

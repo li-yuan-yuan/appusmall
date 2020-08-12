@@ -127,6 +127,7 @@
 .goodsdetail .car .cartFooter .fline3 {
   text-align: center;
   margin-top: 0.3rem;
+  padding-bottom: 1.5rem;
 }
 .goodsdetail .car .cartFooter .fline3 .cart {
   display: inline-block;

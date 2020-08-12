@@ -4,8 +4,12 @@
   color: #fff;
   font-size: 0.4rem;
   line-height: 0.8rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 .cart ul {
+  margin-top: 1rem;
   padding-bottom: 2.62rem;
 }
 .cart ul li {

@@ -35,6 +35,7 @@ class Cart extends Component {
     }
     render() {
         const { shopList, reqEditAction, changeOne, isAll, changeAll, isEditor, changeIsEditor, reqDelAction, getAllPrice } = this.props
+        // console.log(shopList.length);
         if (shopList.length === 0) {
             return (
                 <div className="cart">

@@ -9,10 +9,13 @@ axios.interceptors.request.use(config=>{
     return config
 })
 //响应拦截
-// axios.interceptors.response.use(res=>{
-//     console.log(res);
-//     return res;
-// })
+axios.interceptors.response.use(res=>{
+    // console.log(res);
+    if(res.data.code===403){
+        window.open("http://localhost:3001/#/login","_self")
+    }
+    return res;
+})
 //==============================首页=====================
 //banner图
 export const reqBanner=()=>{
